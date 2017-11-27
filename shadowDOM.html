@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<script>
+			class HWElement extends HTMLElement {
+				constructor() {
+					super();
+					const shadowRoot = this.attachShadow({ mode: 'open' });
+					shadowRoot.innerHTML = 'Hello World'
+				}
+			}
+			customElements.define('hello-world', HWElement);
+		</script>
+	</head>
+	<body>
+		<hello-world></hello-world>
+	</body>
+</html>

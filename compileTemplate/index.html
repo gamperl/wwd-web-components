@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<template id="hw-tempalte">Hello ${name}</template>
+		<script type="module">
+			import createComponent from './createComponent.js';
+			class HelloWorld {
+				constructor() {
+					this.name = "Jon";
+				}
+			}
+			createComponent('hello-world', '#hw-tempalte', HelloWorld);
+		</script>
+	</head>
+	<body>
+		<hello-world></hello-world>
+	</body>
+</html>
